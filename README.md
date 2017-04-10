@@ -1,2 +1,2 @@
-# Office-Space-Alocation
+# Office-Space-Allocation
 Andela Week two Project
