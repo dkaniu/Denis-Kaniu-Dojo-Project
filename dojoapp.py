@@ -1,19 +1,31 @@
-"""
-DojoAllocation
+# Full conceptual application design
 
-Usage:
-  dojoapp.py create_room <room_type> <room_name>...
-  dojoapp.py add_person <person_name> <FELLOW|STAFF> [wants_accomodation]
-  
-
-Options:
-  -h --help     Show help info.
+class Dojo:
+	pass
 
 
-"""
+class Room(Dojo):
+	pass
 
-from docopt import docopt
 
-if __name__ == '__main__':
-    arguments = docopt(__doc__, version='Denis-Kaniu-Dojo-Allocation v_0')
-print(arguments)
+
+
+class Office(Room):
+	pass
+
+
+		
+
+class LivingSpace(Room):
+	pass
+
+#persons in the Dojo
+class Person:
+	pass
+
+class Fellow(Person):
+	pass
+
+
+class Staff(Person):
+	pass
