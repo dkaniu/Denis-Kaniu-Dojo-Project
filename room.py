@@ -1,23 +1,43 @@
+from person import Person
+
 class Room:
-    def __init__(self, name):
-        self.room_nums = []
+    add_people = []
+    room_count = []
+    avlble_space = 0
+
+    def __init__(self):
+        pass
+
+    def create_room(self,name,type):
         self.name = name
+        self.type=type
+        Room.room_count.append(name)
 
-    def room_type(self):
-        return self
+        print("An office called {} has been successfully created!".format(name))
+
+    def add_person(self, person_name, emp_type):
+        self.emp_type = emp_type
+        self.person = Person(person_name, emp_type, choice='Y')
+        Room.add_people.append(person_name)
+        print("{0} {1} has been successfully added! ".format(emp_type,person_name))
 
 
-class Office(Room):
-    number_of_people = 6
-
-    def __init__(self, name):
-        super(Office, self).__init__(name)
 
 
 
 class LivingSpace(Room):
+    def __init__(self):
+        pass
 
-    number_of_people = 4
 
-    def __init__(self, name):
-        super(LivingSpace, self).__init__(name)
+class Office(Room):
+    def __init__(self):
+        pass
+
+
+
+
+
+a = Room()
+a.create_room('blue', 'office')
+a.add_person('waithira', 'staff')
